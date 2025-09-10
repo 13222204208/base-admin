@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "username": "admin",
+    "email": "admin@example.com",
+    "name": "系统管理员",
+    "avatar": "https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png",
+    "role": "admin",
+    "status": "active",
+    "phone": "13800138000",
+    "department": "技术部",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "2",
+    "username": "user001",
+    "email": "user001@example.com",
+    "name": "张三",
+    "avatar": "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
+    "role": "user",
+    "status": "active",
+    "phone": "13800138001",
+    "department": "销售部",
+    "createdAt": "2024-01-02T08:15:00Z",
+    "updatedAt": "2024-01-10T14:20:00Z"
+  },
+  {
+    "id": "3",
+    "username": "user002",
+    "email": "user002@example.com",
+    "name": "李四",
+    "avatar": "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
+    "role": "user",
+    "status": "inactive",
+    "phone": "13800138002",
+    "department": "市场部",
+    "createdAt": "2024-01-03T09:30:00Z",
+    "updatedAt": "2024-01-12T16:45:00Z"
+  },
+  {
+    "id": "4",
+    "username": "user003",
+    "email": "user003@example.com",
+    "name": "王五",
+    "avatar": "https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48png.png",
+    "role": "user",
+    "status": "active",
+    "phone": "13800138003",
+    "department": "人事部",
+    "createdAt": "2024-01-04T11:00:00Z",
+    "updatedAt": "2024-01-14T09:15:00Z"
+  },
+  {
+    "id": "5",
+    "username": "user004",
+    "email": "user004@example.com",
+    "name": "赵六",
+    "avatar": "https://cube.elemecdn.com/c/e6/582a67392937e68a2ddb76a5a07cepng.png",
+    "role": "user",
+    "status": "active",
+    "phone": "13800138004",
+    "department": "财务部",
+    "createdAt": "2024-01-05T13:45:00Z",
+    "updatedAt": "2024-01-13T11:30:00Z"
+  }
+]

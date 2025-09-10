@@ -1,0 +1,59 @@
+{
+  "stats": {
+    "userCount": 1234,
+    "orderCount": 5678,
+    "revenue": 123456.78,
+    "growthRate": 12.5,
+    "todayVisits": 2468,
+    "monthlyRevenue": 98765.43,
+    "activeUsers": 987,
+    "pendingOrders": 156
+  },
+  "chartData": {
+    "userGrowth": [
+      { "date": "2024-01", "value": 100, "category": "用户增长" },
+      { "date": "2024-02", "value": 150, "category": "用户增长" },
+      { "date": "2024-03", "value": 200, "category": "用户增长" },
+      { "date": "2024-04", "value": 280, "category": "用户增长" },
+      { "date": "2024-05", "value": 350, "category": "用户增长" },
+      { "date": "2024-06", "value": 420, "category": "用户增长" }
+    ],
+    "salesData": [
+      { "month": "1月", "sales": 8500, "orders": 120 },
+      { "month": "2月", "sales": 9200, "orders": 135 },
+      { "month": "3月", "sales": 11800, "orders": 168 },
+      { "month": "4月", "sales": 13500, "orders": 192 },
+      { "month": "5月", "sales": 15200, "orders": 215 },
+      { "month": "6月", "sales": 17800, "orders": 248 }
+    ],
+    "revenueData": [
+      { "date": "2024-01-01", "revenue": 12000 },
+      { "date": "2024-01-02", "revenue": 15000 },
+      { "date": "2024-01-03", "revenue": 18000 },
+      { "date": "2024-01-04", "revenue": 22000 },
+      { "date": "2024-01-05", "revenue": 25000 },
+      { "date": "2024-01-06", "revenue": 28000 },
+      { "date": "2024-01-07", "revenue": 32000 }
+    ]
+  },
+  "recentActivities": [
+    {
+      "id": "1",
+      "type": "user_register",
+      "message": "新用户 张三 注册成功",
+      "time": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "type": "order_created",
+      "message": "订单 #12345 已创建",
+      "time": "2024-01-15T09:45:00Z"
+    },
+    {
+      "id": "3",
+      "type": "payment_success",
+      "message": "订单 #12344 支付成功",
+      "time": "2024-01-15T09:15:00Z"
+    }
+  ]
+}
