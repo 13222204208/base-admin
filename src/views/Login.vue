@@ -4,7 +4,7 @@
     <div class="particles">
       <div class="particle" v-for="i in 50" :key="i"></div>
     </div>
-    
+
     <div class="login-card">
       <div class="login-header">
         <div class="logo-animation">
@@ -68,6 +68,7 @@
 import { ref, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
+import { ElMessage } from 'element-plus'
 
 defineOptions({
   name: 'AdminLogin',
@@ -110,7 +111,7 @@ const handleLogin = async () => {
       router.push('/dashboard')
     }
   } catch (error) {
-    console.error('登录失败:', error)
+    ElMessage.error(`登录失败: ${error.message || '未知错误'}`)
   }
 }
 </script>
@@ -158,19 +159,50 @@ const handleLogin = async () => {
 }
 
 /* 随机分布粒子 */
-.particle:nth-child(1) { left: 10%; top: 20%; }
-.particle:nth-child(2) { left: 20%; top: 80%; }
-.particle:nth-child(3) { left: 60%; top: 40%; }
-.particle:nth-child(4) { left: 80%; top: 10%; }
-.particle:nth-child(5) { left: 90%; top: 60%; }
-.particle:nth-child(6) { left: 30%; top: 90%; }
-.particle:nth-child(7) { left: 70%; top: 70%; }
-.particle:nth-child(8) { left: 40%; top: 30%; }
-.particle:nth-child(9) { left: 15%; top: 50%; }
-.particle:nth-child(10) { left: 85%; top: 85%; }
+.particle:nth-child(1) {
+  left: 10%;
+  top: 20%;
+}
+.particle:nth-child(2) {
+  left: 20%;
+  top: 80%;
+}
+.particle:nth-child(3) {
+  left: 60%;
+  top: 40%;
+}
+.particle:nth-child(4) {
+  left: 80%;
+  top: 10%;
+}
+.particle:nth-child(5) {
+  left: 90%;
+  top: 60%;
+}
+.particle:nth-child(6) {
+  left: 30%;
+  top: 90%;
+}
+.particle:nth-child(7) {
+  left: 70%;
+  top: 70%;
+}
+.particle:nth-child(8) {
+  left: 40%;
+  top: 30%;
+}
+.particle:nth-child(9) {
+  left: 15%;
+  top: 50%;
+}
+.particle:nth-child(10) {
+  left: 85%;
+  top: 85%;
+}
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
     opacity: 0.3;
   }
@@ -386,7 +418,7 @@ const handleLogin = async () => {
     margin: 10px;
     padding: 30px 20px;
   }
-  
+
   .particles {
     display: none; /* 在小屏幕上隐藏粒子效果以提升性能 */
   }

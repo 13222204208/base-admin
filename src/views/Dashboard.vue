@@ -50,11 +50,11 @@
           <el-button type="text" @click="refreshActivities">刷新</el-button>
         </div>
       </template>
-      
+
       <div class="activity-list" v-loading="dashboardStore.loading">
-        <div 
-          class="activity-item" 
-          v-for="activity in dashboardStore.recentActivities" 
+        <div
+          class="activity-item"
+          v-for="activity in dashboardStore.recentActivities"
           :key="activity.id"
         >
           <div class="activity-icon" :class="getActivityIconClass(activity.type)">
@@ -82,7 +82,7 @@ import {
   ArrowDown,
   UserFilled,
   DocumentAdd,
-  SuccessFilled
+  SuccessFilled,
 } from '@element-plus/icons-vue'
 import * as echarts from 'echarts'
 
@@ -103,7 +103,7 @@ const statsCards = computed(() => [
     trend: 'up',
     changeClass: 'positive',
     icon: User,
-    color: '#409EFF'
+    color: '#409EFF',
   },
   {
     key: 'orders',
@@ -113,7 +113,7 @@ const statsCards = computed(() => [
     trend: 'up',
     changeClass: 'positive',
     icon: ShoppingCart,
-    color: '#67C23A'
+    color: '#67C23A',
   },
   {
     key: 'revenue',
@@ -123,7 +123,7 @@ const statsCards = computed(() => [
     trend: 'up',
     changeClass: 'positive',
     icon: Money,
-    color: '#E6A23C'
+    color: '#E6A23C',
   },
   {
     key: 'growth',
@@ -133,14 +133,14 @@ const statsCards = computed(() => [
     trend: 'up',
     changeClass: 'positive',
     icon: TrendCharts,
-    color: '#F56C6C'
-  }
+    color: '#F56C6C',
+  },
 ])
 
 // 初始化图表
 const initCharts = async () => {
   await nextTick()
-  
+
   // 用户增长图表
   if (userGrowthChart.value) {
     userGrowthChartInstance = echarts.init(userGrowthChart.value)
@@ -148,19 +148,21 @@ const initCharts = async () => {
       tooltip: { trigger: 'axis' },
       xAxis: {
         type: 'category',
-        data: dashboardStore.chartData.userGrowth?.map(item => item.date) || []
+        data: dashboardStore.chartData.userGrowth?.map((item) => item.date) || [],
       },
       yAxis: { type: 'value' },
-      series: [{
-        data: dashboardStore.chartData.userGrowth?.map(item => item.value) || [],
-        type: 'line',
-        smooth: true,
-        itemStyle: { color: '#409EFF' }
-      }]
+      series: [
+        {
+          data: dashboardStore.chartData.userGrowth?.map((item) => item.value) || [],
+          type: 'line',
+          smooth: true,
+          itemStyle: { color: '#409EFF' },
+        },
+      ],
     }
     userGrowthChartInstance.setOption(userGrowthOption)
   }
-  
+
   // 销售数据图表
   if (salesChart.value) {
     salesChartInstance = echarts.init(salesChart.value)
@@ -168,14 +170,16 @@ const initCharts = async () => {
       tooltip: { trigger: 'axis' },
       xAxis: {
         type: 'category',
-        data: dashboardStore.chartData.salesData?.map(item => item.month) || []
+        data: dashboardStore.chartData.salesData?.map((item) => item.month) || [],
       },
       yAxis: { type: 'value' },
-      series: [{
-        data: dashboardStore.chartData.salesData?.map(item => item.sales) || [],
-        type: 'bar',
-        itemStyle: { color: '#67C23A' }
-      }]
+      series: [
+        {
+          data: dashboardStore.chartData.salesData?.map((item) => item.sales) || [],
+          type: 'bar',
+          itemStyle: { color: '#67C23A' },
+        },
+      ],
     }
     salesChartInstance.setOption(salesOption)
   }
@@ -186,7 +190,7 @@ const getActivityIcon = (type) => {
   const iconMap = {
     user_register: UserFilled,
     order_created: DocumentAdd,
-    payment_success: SuccessFilled
+    payment_success: SuccessFilled,
   }
   return iconMap[type] || UserFilled
 }
@@ -196,7 +200,7 @@ const getActivityIconClass = (type) => {
   const classMap = {
     user_register: 'user-activity',
     order_created: 'order-activity',
-    payment_success: 'payment-activity'
+    payment_success: 'payment-activity',
   }
   return classMap[type] || 'default-activity'
 }
@@ -273,7 +277,7 @@ onMounted(async () => {
 }
 
 .stat-change.positive {
-  color: #67C23A;
+  color: #67c23a;
 }
 
 .stat-icon {
@@ -341,15 +345,15 @@ onMounted(async () => {
 }
 
 .user-activity {
-  background-color: #409EFF;
+  background-color: #409eff;
 }
 
 .order-activity {
-  background-color: #67C23A;
+  background-color: #67c23a;
 }
 
 .payment-activity {
-  background-color: #E6A23C;
+  background-color: #e6a23c;
 }
 
 .default-activity {

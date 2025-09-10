@@ -22,5 +22,16 @@ export default defineConfig([
 
   js.configs.recommended,
   ...pluginVue.configs['flat/essential'],
+
+  // 自定义规则
+  {
+    name: 'app/custom-rules',
+    rules: {
+      'vue/multi-word-component-names': 'off', // 关闭多单词组件名限制
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+    },
+  },
+
   skipFormatting,
 ])
